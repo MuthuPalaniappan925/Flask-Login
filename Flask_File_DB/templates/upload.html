@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Upload PDF file</title>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        color: #333;
+        text-align: center;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      input[type="file"] {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #f7f7f7;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+      }
+      input[type="text"] {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #f7f7f7;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+      }
+      input[type="submit"] {
+        background-color: #8e44ad;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 1.2rem;
+      }
+      input[type="submit"]:hover {
+        background-color: #9b59b6;
+      }
+      label {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: #333;
+      }
+      select {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #f7f7f7;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Upload PDF file</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <label for="pdf">Select a PDF file:</label>
+      <input type="file" name="pdf" accept=".pdf" id="pdf">
+      <label for="name">Enter your name:</label>
+      <input type="text" name="name" id="name">
+      <label for="year">Select your year of study:</label>
+      <select name="year" id="year">
+        <option value="1">First Year</option>
+        <option value="2">Second Year</option>
+      </select>
+      <label for="dept">Select your branch</label>
+      <select name="dept" id="dept">
+        <option value="1">AI&DS</option>
+        <option value="2">CSE-IoT</option>
+        <option value="3">B.Com</option>
+        <option value="4">B.Com PA</option>
+      </select>
+      <input type="submit" value="Upload">
+    </form>
+  </body>
+</html>
